@@ -1,1 +1,72 @@
 
+body {
+  margin: 0;
+  background-color: darkgray;
+  text-align: center;
+}
+
+.navMenu, a {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.navMenu * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.navMenu li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1em;
+  padding: 0;
+}
+.navMenu a {
+  padding: 0.5em 0.8em;
+  margin: 0.2em 0;
+  display: block;
+  color: rgb(255, 255, 255);
+  position: relative;
+  text-decoration: none;
+}
+.navMenu a:before,
+.navMenu a:after {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.navMenu a:before {
+  left: 0;
+  top: 0;
+  border-left: 3px solid blue;
+  border-top: 3px solid blue;
+  -webkit-transform: translate(100%, 50%);
+  transform: translate(100%, 50%);
+}
+.navMenu a:after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px solid blue;
+  border-bottom: 3px solid blue;
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+.navMenu a:hover,
+.navMenu .navMenuSelected a {
+  color: blue;
+}
+.navMenu a:hover:before,
+.navMenu .navMenuSelected a:before,
+.navMenu a:hover:after,
+.navMenu .navMenuSelected a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "./HeaderNavBar.module.css";
 
 const HeaderNavBar = () => {
   useEffect(() => {
@@ -51,22 +52,25 @@ const HeaderNavBar = () => {
   const personalClass = personalFocused ? "navMenuSelected" : "navMenu";
 
   return (
-    <div>
-      <ul className="navMenu">
-        <li className={homeClass} onClick={homeClicked}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={professionalClass}>
-          <Link to="/professional" onClick={professionalClicked}>
-            Professional
-          </Link>
-        </li>
-        <li className={personalClass}>
-          <Link to="/personal" onClick={personalClicked}>
-            Personal
-          </Link>
-        </li>
-      </ul>
+    <div className={styles.headerDiv}>
+      <h2 className={styles.name}>Joshua Worthington</h2>
+      <div className={styles.navDiv}>
+        <ul className="navMenu">
+          <li className={homeClass} onClick={homeClicked}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={professionalClass}>
+            <Link to="/professional" onClick={professionalClicked}>
+              Professional
+            </Link>
+          </li>
+          <li className={personalClass}>
+            <Link to="/personal" onClick={personalClicked}>
+              Personal
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

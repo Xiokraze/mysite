@@ -1,7 +1,5 @@
 :root {
-  --NavColor: white;
-  --NavColorFocus: blue;
-  --TextColor: white;
+  --NavColorFocus: #7B3F00;
   --DarkBlack: #1A1A1A;
   --DarkGray: #343434;
   --GunMetal: #8D918D;
@@ -18,10 +16,16 @@ body {
 
 .navMenu, a {
   font-family: 'Raleway', Arial, sans-serif;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
+  padding: 0.5em 0.8em;
+  margin: 0.2em 0;
+  display: block;
+  color: #8D918D;
+  position: relative;
+  text-decoration: none;
 }
 .navMenu * {
   -webkit-box-sizing: border-box;
@@ -35,14 +39,7 @@ body {
   margin: 0 1em;
   padding: 0;
 }
-.navMenu a {
-  padding: 0.5em 0.8em;
-  margin: 0.2em 0;
-  display: block;
-  color: #8D918D;
-  position: relative;
-  text-decoration: none;
-}
+
 .navMenu a:before,
 .navMenu a:after {
   height: 1rem;
@@ -56,22 +53,22 @@ body {
 .navMenu a:before {
   left: 0;
   top: 0;
-  border-left: 3px solid var(--GunMetal);
-  border-top: 3px solid var(--GunMetal);
+  border-left: 3px solid var(--NavColorFocus);
+  border-top: 3px solid var(--NavColorFocus);
   -webkit-transform: translate(100%, 50%);
   transform: translate(100%, 50%);
 }
 .navMenu a:after {
   right: 0;
   bottom: 0;
-  border-right: 3px solid var(--GunMetal);
-  border-bottom: 3px solid var(--GunMetal);
+  border-right: 3px solid var(--NavColorFocus);
+  border-bottom: 3px solid var(--NavColorFocus);
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }
 .navMenu a:hover,
 .navMenu .navMenuSelected a {
-  color: var(--DarkGray);
+  color: var(--NavColorFocus);
 }
 .navMenu a:hover:before,
 .navMenu .navMenuSelected a:before,
@@ -80,4 +77,10 @@ body {
   -webkit-transform: translate(0%, 0%);
   transform: translate(0%, 0%);
   opacity: 1;
+}
+
+@media screen and (max-width: 780px) {
+  .navMenu li {
+    display: block;
+  }
 }

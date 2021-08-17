@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./HeaderNavBar.module.css";
+import "./Animated.scss";
 
 const HeaderNavBar = () => {
   useEffect(() => {
@@ -53,7 +54,31 @@ const HeaderNavBar = () => {
 
   return (
     <div className={styles.headerDiv}>
-      <h2 className={styles.name}>Joshua Worthington</h2>
+      {/* <h2 className={styles.name}>Joshua Worthington</h2> */}
+      <typewriter>Joshua Worthington</typewriter>
+      <div className={styles.spanDiv}>
+        
+        
+        {/* <span>J</span>
+        <span>o</span>
+        <span>s</span>
+        <span>h</span>
+        <span>u</span>
+        <span>a</span>
+        <span> </span>
+        <span>W</span>
+        <span>o</span>
+        <span>r</span>
+        <span>t</span>
+        <span>h</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>t</span>
+        <span>o</span>
+        <span>n</span> */}
+      </div>
+
       <div className={styles.navDiv}>
         <ul className="navMenu">
           <li className={homeClass} onClick={homeClicked}>

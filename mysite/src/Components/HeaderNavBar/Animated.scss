@@ -1,23 +1,25 @@
 // @import "compass/css3";
 
-@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
-
-typewriter {
+browserTypewriter, mobileTypewriter {
   border-right: solid 2px #7B3F00;
   white-space: nowrap;
   overflow: hidden;
   text-align: left;
   font-family: "Source Code Pro", monospace;
-  font-size: 1.5rem;
+  font-size: large;
   margin: auto;
   margin-left: 1rem;
-  width: 15rem;
+  width: 12rem;
+}
+
+mobileTypewriter {
+  display: none;
 }
 
 /* Animation */
-typewriter {
+browserTypewriter, mobileTypewriter {
   animation-iteration-count: infinite;
-  animation: animated-text 10s steps(29, end) 2s infinite alternate both,
+  animation: animated-text 1s steps(29, end) 2s infinite alternate both,
     animated-cursor 1s steps(29, end) infinite;
 }
 
@@ -30,7 +32,7 @@ typewriter {
     width: 0rem;
   }
   60% {
-    width: 15rem;
+    width: 12rem;
   }
 }
 
@@ -41,5 +43,15 @@ typewriter {
   }
   to {
     border-right-color: transparent;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  browserTypewriter {
+    display: none;
+  }
+  mobileTypewriter {
+    margin: auto;
+    display: block;
   }
 }

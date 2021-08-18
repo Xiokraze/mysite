@@ -53,7 +53,7 @@ const HeaderNavBar = () => {
 
   return (
     <div className="headerDiv">
-      <typewriter>Joshua Worthington</typewriter>
+      <browserTypewriter>Joshua Worthington</browserTypewriter>
       <ul className="navMenu">
           <li className={homeClass} onClick={homeClicked}>
             <Link to="/">Home</Link>
@@ -69,6 +69,7 @@ const HeaderNavBar = () => {
             </Link>
           </li>
         </ul>
+      <mobileTypewriter>Joshua Worthington</mobileTypewriter>
     </div>
   );
 };

@@ -89,6 +89,16 @@ h2 {
   opacity: 1;
 }
 
+@media screen and (max-width: 500px) {
+  .headerDiv {
+    display: block;
+    padding-bottom: 1rem;
+  }
+  .navMenu {
+    margin: auto;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .navMenu li {
     display: block;

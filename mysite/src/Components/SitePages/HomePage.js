@@ -1,10 +1,12 @@
 import me from "../../Assets/me.jpg";
 import styles from "./HomePage.module.css";
-import SocialMedia from "../SocialMedia";
+import Descriptors from "../UIElements/Descriptors";
+
 
 const HomePage = () => {
   return (
     <div className={styles.rootHomeDiv}>
+      <Descriptors/>
       <div className={styles.homeDiv}>
         <img src={me} alt="" className={styles.meContainer} />
         <div className={styles.aboutMe}>
@@ -21,7 +23,6 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      {/* <SocialMedia /> */}
     </div>
   );
 };

@@ -11,7 +11,7 @@
   width: 90%;
 }
 
-.socialMediaIcon {
+.facebook, .github, .linkedin {
   color: var(--Chocolate);
   border: 3px solid var(--Chocolate);
   border-radius: 20%;
@@ -20,9 +20,22 @@
   transition: border-radius, transform .5s ease;
 }
 
-.socialMediaIcon:hover {
+.facebook:hover {
+  color: #4267B2;
+  border-color: #4267B2;
+}
+
+.github:hover {
+  color: #6e5494;
+  border-color: #6e5494;
+}
+
+.linkedin:hover {
+  color: #0077b5;
+  border-color: #0077b5;
+}
+
+.facebook:hover, .github:hover, .linkedin:hover {
   transform: rotate(360deg);
-  color: var(--GunMetal);
-  border-color: var(--GunMetal);
   transition: transform .5s ease;
 }

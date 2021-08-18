@@ -6,6 +6,7 @@ import HomePage from "./Components/SitePages/HomePage";
 import ProfessionalPage from "./Components/SitePages/ProfessionalPage";
 import PersonalPage from "./Components/SitePages/PersonalPage";
 import Footer from "./Components/Footer/Footer";
+import LoadingCode from "./Components/UIElements/LoadingCode";
 
 function App() {
   return (
@@ -13,11 +14,18 @@ function App() {
       <Suspense fallback={<ActivityIndicator />}>
         <HeaderNavBar />
         <Switch>
-          <Route path="/" exact><HomePage/></Route>
-          <Route path="/professional" exact><ProfessionalPage/></Route>
-          <Route path="/personal" exact><PersonalPage/></Route>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/professional" exact>
+            <ProfessionalPage />
+          </Route>
+          <Route path="/personal" exact>
+            <PersonalPage />
+          </Route>
         </Switch>
-        <Footer/>
+        <Footer />
+        <LoadingCode />
       </Suspense>
     </React.Fragment>
   );

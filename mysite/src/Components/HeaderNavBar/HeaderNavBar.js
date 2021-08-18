@@ -55,20 +55,20 @@ const HeaderNavBar = () => {
     <div className="headerDiv">
       <browserTypewriter>Joshua Worthington</browserTypewriter>
       <ul className="navMenu">
-          <li className={homeClass} onClick={homeClicked}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={professionalClass}>
-            <Link to="/professional" onClick={professionalClicked}>
-              Professional
-            </Link>
-          </li>
-          <li className={personalClass}>
-            <Link to="/personal" onClick={personalClicked}>
-              Personal
-            </Link>
-          </li>
-        </ul>
+        <li className={homeClass} onClick={homeClicked}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={professionalClass}>
+          <Link to="/professional" onClick={professionalClicked}>
+            Professional
+          </Link>
+        </li>
+        <li className={personalClass}>
+          <Link to="/personal" onClick={personalClicked}>
+            Personal
+          </Link>
+        </li>
+      </ul>
       <mobileTypewriter>Joshua Worthington</mobileTypewriter>
     </div>
   );

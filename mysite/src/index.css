@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 :root {
-  --Chocolate: #7B3F00;
-  --DarkBlack: #1A1A1A;
+  --Chocolate: #7b3f00;
+  --DarkBlack: #1a1a1a;
   --DarkGray: #343434;
-  --GunMetal: #8D918D;
+  --GunMetal: #8d918d;
 }
 
 body {
@@ -12,6 +14,13 @@ body {
   background-attachment: fixed;
   text-align: center;
   color: var(--GunMetal);
+  font-family: "Consolas", Arial, sans-serif;
+}
+
+.descriptors {
+  color: var(--Chocolate);
+  font-weight: bold;
+  font-size: x-large;
 }
 
 h2 {
@@ -20,12 +29,45 @@ h2 {
 
 .headerDiv {
   display: flex;
-  margin-bottom: 3rem;
   border-bottom: 3px solid var(--GunMetal);
 }
 
-.navMenu, a {
-  font-family: 'Raleway', Arial, sans-serif;
+.loadingDivContainer {
+  width: 100%;
+  height: 30rem;
+  top: 4rem;
+  position: absolute;
+  overflow: hidden;
+}
+
+.loadingDiv {
+  width: 20rem;
+  height: 30rem;
+  border: 1px solid red;
+  position: absolute;
+  right: -20rem;
+  transform: translateX(0rem);
+  transition: transform 1.5s ease;
+}
+
+.loadingDiv2 {
+  width: 20rem;
+  height: 30rem;
+  border: 1px solid red;
+  position: absolute;
+  right: -5rem;
+  transform: translateX(0rem);
+  transition: transform 1.5s ease;
+}
+
+.loadingDiv:hover {
+  border-color: blue;
+  transform: translateX(-20rem);
+  transition: transform 1.5s ease;
+}
+
+.navMenu,
+a {
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
@@ -33,7 +75,7 @@ h2 {
   padding: 0.5em 0.8em;
   margin: 0.2em 0;
   display: block;
-  color: #8D918D;
+  color: #8d918d;
   position: relative;
   text-decoration: none;
 }
@@ -55,7 +97,7 @@ h2 {
   height: 1rem;
   width: 1rem;
   position: absolute;
-  content: '';
+  content: "";
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   opacity: 0;

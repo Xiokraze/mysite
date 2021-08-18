@@ -1,0 +1,37 @@
+.aboutMe {
+  float: right;
+}
+
+.homeDiv {
+  display: flex;
+  max-width: 60rem;
+  margin: auto;
+}
+
+.meContainer, .aboutMe {
+  width: 50%;
+  height: auto;
+  margin: 1rem;
+}
+
+.meContainer {
+  float: left;
+  border: 2px solid var(--GunMetal);
+}
+
+.rootHomeDiv {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (max-width: 780px) {
+  .homeDiv {
+    display: block;
+  }
+  .meContainer, .aboutMe {
+    float: none;
+    margin: auto;
+    width: 70%;
+  }
+}

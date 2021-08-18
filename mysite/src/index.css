@@ -1,5 +1,5 @@
 :root {
-  --NavColorFocus: #7B3F00;
+  --Chocolate: #7B3F00;
   --DarkBlack: #1A1A1A;
   --DarkGray: #343434;
   --GunMetal: #8D918D;
@@ -12,6 +12,16 @@ body {
   background-attachment: fixed;
   text-align: center;
   color: var(--GunMetal);
+}
+
+h2 {
+  color: var(--Chocolate);
+}
+
+.headerDiv {
+  display: flex;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid var(--GunMetal);
 }
 
 .navMenu, a {
@@ -53,22 +63,22 @@ body {
 .navMenu a:before {
   left: 0;
   top: 0;
-  border-left: 3px solid var(--NavColorFocus);
-  border-top: 3px solid var(--NavColorFocus);
+  border-left: 3px solid var(--Chocolate);
+  border-top: 3px solid var(--Chocolate);
   -webkit-transform: translate(100%, 50%);
   transform: translate(100%, 50%);
 }
 .navMenu a:after {
   right: 0;
   bottom: 0;
-  border-right: 3px solid var(--NavColorFocus);
-  border-bottom: 3px solid var(--NavColorFocus);
+  border-right: 3px solid var(--Chocolate);
+  border-bottom: 3px solid var(--Chocolate);
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }
 .navMenu a:hover,
 .navMenu .navMenuSelected a {
-  color: var(--NavColorFocus);
+  color: var(--Chocolate);
 }
 .navMenu a:hover:before,
 .navMenu .navMenuSelected a:before,

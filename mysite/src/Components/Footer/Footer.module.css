@@ -1,0 +1,28 @@
+.linkDiv {
+  float: right;
+  margin: auto;
+}
+
+.socialDiv {
+  margin-bottom: 1rem;
+  margin: auto;
+  position: relative;
+  bottom: 0;
+  width: 90%;
+}
+
+.socialMediaIcon {
+  color: var(--Chocolate);
+  border: 3px solid var(--Chocolate);
+  border-radius: 20%;
+  padding: .5em;
+  transform: rotate(0deg);
+  transition: border-radius, transform .5s ease;
+}
+
+.socialMediaIcon:hover {
+  transform: rotate(360deg);
+  color: var(--GunMetal);
+  border-color: var(--GunMetal);
+  transition: transform .5s ease;
+}

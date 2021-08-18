@@ -5,6 +5,7 @@ import HeaderNavBar from "./Components/HeaderNavBar/HeaderNavBar";
 import HomePage from "./Components/SitePages/HomePage";
 import ProfessionalPage from "./Components/SitePages/ProfessionalPage";
 import PersonalPage from "./Components/SitePages/PersonalPage";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/professional" exact><ProfessionalPage/></Route>
           <Route path="/personal" exact><PersonalPage/></Route>
         </Switch>
+        <Footer/>
       </Suspense>
     </React.Fragment>
   );

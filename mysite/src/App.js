@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import ActivityIndicator from "./Components/ActivityIndicator/ActivityIndicator";
 import HeaderNavBar from "./Components/HeaderNavBar/HeaderNavBar";
 import HomePage from "./Components/SitePages/HomePage";
@@ -9,10 +9,24 @@ import Footer from "./Components/Footer/Footer";
 import LoadingCode from "./Components/UIElements/LoadingCode";
 
 function App() {
+  const [animationClass, setAnimationClass] = useState("hide");
+
+  const startAnimation = () => {
+    setAnimationClass("loadingDivShow");
+  };
+
+  const hideAnimation = () => {
+    setAnimationClass("loadingDivHide");
+  };
+
   return (
     <React.Fragment>
       <Suspense fallback={<ActivityIndicator />}>
-        <HeaderNavBar />
+        <LoadingCode
+          animationClass={animationClass}
+          hideAnimation={hideAnimation}
+        />
+        <HeaderNavBar startAnimation={startAnimation} />
         <Switch>
           <Route path="/" exact>
             <HomePage />
@@ -25,7 +39,6 @@ function App() {
           </Route>
         </Switch>
         <Footer />
-        <LoadingCode />
       </Suspense>
     </React.Fragment>
   );

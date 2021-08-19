@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Animated.scss";
 
-const HeaderNavBar = ({startAnimation}) => {
-  //const [animationFinished, setAnimationFinished] = useState(false);
+const HeaderNavBar = ({loadingSlideLeftAnimation, loadingAnimationRunning}) => {
   const [homeFocused, setHomeFocused] = useState(true);
   const [professionalFocused, setProfessionalFocused] = useState(false);
   const [personalFocused, setPersonalFocused] = useState(false);
@@ -32,7 +31,9 @@ const HeaderNavBar = ({startAnimation}) => {
     setProfessionalFocused(false);
     setPersonalFocused(false);
     sessionStorage.setItem("menuSelection", "home");
-    startAnimation();
+    if (!loadingAnimationRunning) {
+      loadingSlideLeftAnimation();
+    }
   };
 
   const professionalClicked = () => {
@@ -40,7 +41,9 @@ const HeaderNavBar = ({startAnimation}) => {
     setProfessionalFocused(true);
     setPersonalFocused(false);
     sessionStorage.setItem("menuSelection", "professional");
-    startAnimation();
+    if (!loadingAnimationRunning) {
+      loadingSlideLeftAnimation();
+    }
   };
 
   const personalClicked = () => {
@@ -48,7 +51,9 @@ const HeaderNavBar = ({startAnimation}) => {
     setProfessionalFocused(false);
     setPersonalFocused(true);
     sessionStorage.setItem("menuSelection", "personal");
-    startAnimation();
+    if (!loadingAnimationRunning) {
+      loadingSlideLeftAnimation();
+    }
   };
 
   const homeClass = homeFocused ? "navMenuSelected" : "navMenu";

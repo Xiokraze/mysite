@@ -13,8 +13,8 @@
 .loadingDivShow {
   background-color: black;
   opacity: 0.75;
-  width: 20rem;
-  height: 30rem;
+  width: 10rem;
+  height: 15rem;
   position: absolute;
   right: 0rem;
   z-index: 5;
@@ -26,50 +26,72 @@
 .loadingDivHide {
   background-color: black;
   opacity: 0.75;
-  width: 20rem;
-  height: 30rem;
+  width: 10rem;
+  height: 15rem;
   position: absolute;
   right: 0rem;
   z-index: 5;
   transform: translateX(20rem);
   text-align: left;
   transition: border-color, transform 1s ease;
-  transition-delay: 4s;
+  transition-delay: 3s;
 }
 
 .loadingDivData {
   display: none;
 }
 
-.loadingDivDataShow1 {
+.l1,
+.l2,
+.l3,
+.l4,
+.l5,
+.l6 {
   white-space: nowrap;
   overflow: hidden;
-  color: white;
-  animation: animated-text steps(30, end) 1s 1 normal both;
+  color: green;
+  font-weight: bold;
 }
 
-.loadingDivDataShow2 {
-  white-space: nowrap;
-  overflow: hidden;
-  color: white;
-  animation: animated-text steps(30, end) 1s 1 normal both;
+.l1,
+.l6 {
+  margin-left: 1rem;
+}
+
+.l2,
+.l3,
+.l4,
+.l5 {
+  margin-left: 3rem;
+}
+
+.l1 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
+}
+
+.l2 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
+  animation-delay: 0.5s;
+}
+
+.l3 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
   animation-delay: 1s;
 }
 
-.loadingDivDataShow3 {
-  white-space: nowrap;
-  overflow: hidden;
-  color: white;
-  animation: animated-text steps(30, end) 1s 1 normal both;
+.l4 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
+  animation-delay: 1.5s;
+}
+
+.l5 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
   animation-delay: 2s;
 }
 
-.loadingDivDataShow4 {
-  white-space: nowrap;
-  overflow: hidden;
-  color: white;
-  animation: animated-text steps(30, end) 1s 1 normal both;
-  animation-delay: 3s;
+.l6 {
+  animation: animated-text steps(30, end) 0.5s 1 normal both;
+  animation-delay: 2.5s;
 }
 
 @keyframes animated-text {
@@ -77,6 +99,6 @@
     width: 0;
   }
   to {
-    width: 20rem;
+    width: 10rem;
   }
 }

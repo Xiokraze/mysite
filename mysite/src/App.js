@@ -10,13 +10,19 @@ import LoadingCode from "./Components/UIElements/LoadingCode";
 
 function App() {
   const [animationClass, setAnimationClass] = useState("hide");
+  const [loadingAnimationRunning, setLoadingAnimationRunning] = useState(false);
 
-  const startAnimation = () => {
+  const loadingSlideLeftAnimation = () => {
     setAnimationClass("loadingDivShow");
+    setLoadingAnimationRunning(true);
   };
 
-  const hideAnimation = () => {
+  const loadingSlideRightAnimation = () => {
     setAnimationClass("loadingDivHide");
+  };
+
+  const loadingSlideRightAnimationComplete = () => {
+    setLoadingAnimationRunning(false);
   };
 
   return (
@@ -24,9 +30,15 @@ function App() {
       <Suspense fallback={<ActivityIndicator />}>
         <LoadingCode
           animationClass={animationClass}
-          hideAnimation={hideAnimation}
+          hideAnimation={loadingSlideRightAnimation}
+          loadingSlideRightAnimationComplete={
+            loadingSlideRightAnimationComplete
+          }
         />
-        <HeaderNavBar startAnimation={startAnimation} />
+        <HeaderNavBar
+          loadingSlideLeftAnimation={loadingSlideLeftAnimation}
+          loadingAnimationRunning={loadingAnimationRunning}
+        />
         <Switch>
           <Route path="/" exact>
             <HomePage />

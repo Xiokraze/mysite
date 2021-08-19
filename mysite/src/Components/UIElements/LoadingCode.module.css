@@ -102,3 +102,9 @@
     width: 10rem;
   }
 }
+
+@media screen and (max-width: 780px) {
+  .loadingDivContainer {
+    top: 0rem;
+  }
+}

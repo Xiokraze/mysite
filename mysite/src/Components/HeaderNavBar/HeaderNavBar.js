@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Animated.scss";
 
-const HeaderNavBar = ({loadingSlideLeftAnimation, loadingAnimationRunning}) => {
+const HeaderNavBar = ({
+  loadingSlideLeftAnimation,
+  loadingAnimationRunning,
+}) => {
   const [homeFocused, setHomeFocused] = useState(true);
   const [professionalFocused, setProfessionalFocused] = useState(false);
   const [personalFocused, setPersonalFocused] = useState(false);
@@ -24,6 +27,7 @@ const HeaderNavBar = ({loadingSlideLeftAnimation, loadingAnimationRunning}) => {
           break;
       }
     }
+    // eslint-disable-next-line
   }, []);
 
   const homeClicked = () => {

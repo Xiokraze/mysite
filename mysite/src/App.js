@@ -4,7 +4,7 @@ import ActivityIndicator from "./Components/ActivityIndicator/ActivityIndicator"
 import HeaderNavBar from "./Components/HeaderNavBar/HeaderNavBar";
 import HomePage from "./Components/SitePages/HomePage";
 import ProfessionalPage from "./Components/SitePages/ProfessionalPage";
-import PersonalPage from "./Components/SitePages/PersonalPage";
+import PersonalPage from "./Components/SitePages/Personal/PersonalPage";
 import Footer from "./Components/Footer/Footer";
 import LoadingCode from "./Components/UIElements/LoadingCode";
 

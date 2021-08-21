@@ -1,0 +1,16 @@
+.rootDogsDiv {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.headerImgContainer {
+  margin: 1rem;
+  display: inline-block;
+}
+
+.headerImage {
+  width: auto;
+  height: 20rem;
+  border: 3px solid var(--GunMetal)
+}

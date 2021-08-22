@@ -9,8 +9,15 @@
   display: inline-block;
 }
 
-.headerImage {
+.sliderImage {
   width: auto;
-  height: 20rem;
-  border: 3px solid var(--GunMetal)
+  height: 25rem;
+  object-fit: cover;
+}
+
+.test {
+  height: 25rem;
+  width: 25rem;
+  border: 3px solid red;
+  margin: auto;
 }

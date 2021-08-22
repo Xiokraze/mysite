@@ -1,0 +1,10 @@
+.img {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.imgRootDiv {
+  padding: 1rem;
+  width:  30rem;
+  height: auto;
+}

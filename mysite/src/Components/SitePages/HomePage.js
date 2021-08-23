@@ -5,7 +5,7 @@ import Descriptors from "../UIElements/Descriptors";
 const HomePage = () => {
   return (
     <div className={styles.rootHomeDiv}>
-      <Descriptors />
+      <Descriptors text="Programmer. Gamer. Poet. DIY'er."/>
       <div className={styles.homeDiv}>
         <img src={me} alt="" className={styles.meContainer} />
         <div className={styles.aboutMe}>

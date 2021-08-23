@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PersonalPage.module.css";
 import Dogs from "./Dogs";
+import Poetry from "./Poetry";
 
 const PersonalPage = () => {
   const [showPoetry, setShowPoetry] = useState(false);
@@ -47,9 +48,9 @@ const PersonalPage = () => {
             Poetry
           </li>
         </ul>
-        <div className={styles.dataContainer}></div>
       </div>
       {showDogs && <Dogs />}
+      {showPoetry && <Poetry />}
     </div>
   );
 };

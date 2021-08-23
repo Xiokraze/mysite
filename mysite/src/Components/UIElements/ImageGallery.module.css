@@ -8,3 +8,10 @@
   width:  30rem;
   height: auto;
 }
+
+
+@media screen and (max-width: 780px) {
+  .imgRootDiv {
+    width: 20rem;
+  }
+}

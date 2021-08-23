@@ -10,7 +10,7 @@ const ImageGallery = ({ title, images }) => {
       <h2>{title}</h2>
       <Carousel autoPlay interval="5000" transitionTime="2000" infiniteLoop="true">
         {images.map((image) => (
-          <img key={image} src={image} className={styles.img}/>
+          <img key={image} alt="" src={image} className={styles.img}/>
         ))}
       </Carousel>
     </div>

@@ -1,0 +1,19 @@
+.poem {
+  width: 25rem;
+  padding: 1rem;
+}
+
+.poemRootDiv {
+  display: inline-flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 780px) {
+  .poem {
+    margin: auto;
+  }
+  .poemRootDiv {
+    display: block;
+  }
+}

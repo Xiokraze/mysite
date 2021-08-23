@@ -11,7 +11,6 @@ import n2 from "../../../Assets/Dogs/n2.jpg";
 import n3 from "../../../Assets/Dogs/n3.jpg";
 import n4 from "../../../Assets/Dogs/n4.jpg";
 import styles from "./Dogs.module.css";
-import React, { useState } from "react";
 import ImageGallery from "../../UIElements/ImageGallery";
 
 const Dogs = () => {

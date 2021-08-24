@@ -5,7 +5,7 @@ import Poetry from "./Poetry";
 
 const PersonalPage = () => {
   const [showPoetry, setShowPoetry] = useState(false);
-  const [showDogs, setShowDogs] = useState(false);
+  const [showDogs, setShowDogs] = useState(true);
 
   const hideComponents = () => {
     setShowDogs(false);

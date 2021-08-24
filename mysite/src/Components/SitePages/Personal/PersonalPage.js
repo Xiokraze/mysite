@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./PersonalPage.module.css";
 import Dogs from "./Dogs";
 import Poetry from "./Poetry";
+import SideNavBar from "../../UIElements/SideNavBar/SideNavBar";
+import SideNavBarOption from "../../UIElements/SideNavBar/SideNavBarOption";
 
 const PersonalPage = () => {
   const [showPoetry, setShowPoetry] = useState(false);
@@ -34,21 +36,20 @@ const PersonalPage = () => {
     showComponent("poetry");
   };
 
-  const poetryClass = showPoetry ? styles.liOptionFocused : styles.liOption;
-  const dogsClass = showDogs ? styles.liOptionFocused : styles.liOption;
-
   return (
     <div className={styles.personalDiv}>
-      <div className={styles.itemDiv}>
-        <ul className={styles.ulList}>
-          <li onClick={dogsClicked} className={dogsClass}>
-            Dogs
-          </li>
-          <li onClick={poetryClicked} className={poetryClass}>
-            Poetry
-          </li>
-        </ul>
-      </div>
+      <SideNavBar>
+        <SideNavBarOption
+          onclick={dogsClicked}
+          isFocused={showDogs}
+          title="Dogs"
+        />
+        <SideNavBarOption
+          onclick={poetryClicked}
+          isFocused={showPoetry}
+          title="Poetry"
+        />
+      </SideNavBar>
       {showDogs && <Dogs />}
       {showPoetry && <Poetry />}
     </div>

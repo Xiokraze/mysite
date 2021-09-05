@@ -4,11 +4,12 @@
 
 .loadingDivContainer {
   width: 100%;
-  height: 30rem;
+  height: 15rem;
   top: 4rem;
   position: absolute;
   overflow: hidden;
-  z-index: -1;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 .loadingDivShow {
@@ -18,7 +19,6 @@
   height: 15rem;
   position: absolute;
   right: 0rem;
-  z-index: 5;
   text-align: left;
   transform: translateX(0rem);
   transition: border-color, transform 1s ease;
@@ -31,7 +31,6 @@
   height: 15rem;
   position: absolute;
   right: 0rem;
-  z-index: 5;
   transform: translateX(20rem);
   text-align: left;
   transition: border-color, transform 1s ease;

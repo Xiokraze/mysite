@@ -15,6 +15,21 @@ body {
   text-align: center;
   color: var(--GunMetal);
   font-family: "Consolas", Arial, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--DarkGray) var(--GunMetal);
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--DarkGray);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--DarkGray) ;
+  border-radius: 6px;
+  border: 2px solid var(--GunMetal);
 }
 
 .descriptors {
@@ -99,6 +114,90 @@ a {
   opacity: 1;
 }
 
+.projectDiv {
+  display: block;
+  margin: auto;
+  width: 30rem;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border 1s ease;
+}
+
+.projectDiv:hover {
+  border: 3px solid var(--GunMetal);
+  border-radius: 8px;
+  transition: border 1s ease;
+}
+
+.projectList, .projectListHide {
+  width: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  overflow-wrap: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.projectList {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.projectListHide {
+  opacity: 0;
+}
+
+.projectLanguagesli {
+  margin: 1rem;
+}
+
+.projectText, .projectTextHide {
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.projectText {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.projectTextHide {
+  opacity: 0;
+  margin: 0;
+}
+
+.projectTextDiv {
+  visibility: visible;
+  height: auto;
+}
+
+.projectTextDivHide {
+  visibility: hidden;
+  height: 0;
+}
+
+.projectTitle {
+  margin: .5rem;
+}
+
+.projectButton {
+  margin: .5rem auto;
+  width: 8rem;
+  height: 3rem;
+  border: 3px solid var(--Chocolate);
+  border-radius: 8px;
+  padding: .5em;
+  background: transparent;
+  color: var(--GunMetal);
+  font-size: medium;
+  font-weight: bold;
+  display: block;
+}
+
 @media screen and (max-width: 500px) {
   .headerDiv {
     display: block;
@@ -110,6 +209,9 @@ a {
 }
 
 @media screen and (max-width: 780px) {
+  .projectDiv {
+    width: 100%;
+  }
   .navMenu li {
     display: block;
   }
